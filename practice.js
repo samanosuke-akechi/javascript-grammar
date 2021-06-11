@@ -18,9 +18,28 @@ console.log(sport);
 
 // 配列と繰り返し処理
 let fruits = ["apple", "banana", "orange"];
-const fruit_name = ([...arr]) => {
+const fruit_name = (arr) => {
   for(let i = 0; i < arr.length; ++i) {
     console.log(arr[i]);
   }
 };
 fruit_name(fruits);
+
+// 配列内の要素をシャッフル(ランダムソート)する方法
+  // 参考記事：https://www.nxworld.net/js-array-shuffle.html
+const shuffle = ([...array]) => {  // スプレッド演算子
+  for (let i = array.length - 1; i >= 0; i--) {  // 配列の最後の要素から繰り返しスタート
+    const j = Math.floor(Math.random() * (i + 1));  // ランダムな整数を代入
+    [array[i], array[j]] = [array[j], array[i]];  // 一つ上のコードのランダムな整数の要素と、繰り返し中のiの整数の要素を入れ替える
+  }
+  return array;
+}
+
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log(shuffle(array));
+
+  // ランダムソートを10回繰り返す
+for (let i = 0; i < 10; i++) {
+  console.log(shuffle(array));
+}
