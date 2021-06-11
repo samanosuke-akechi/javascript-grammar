@@ -15,3 +15,11 @@ const sport = "soccer"  //定数sportに"soccer"を定義
 console.log(sport);
   // 定数は再代入・再定義は出来ない
   // const sport = "baseball" => エラー
+
+let fruits = ["apple", "banana", "orange"];
+const fruit_name = ([...arr]) => {
+  for(let i = 0; i < arr.length; ++i) {
+    console.log(arr[i]);
+  }
+};
+fruit_name(fruits);
