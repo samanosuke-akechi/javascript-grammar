@@ -16,6 +16,7 @@ console.log(sport);
   // 定数は再代入・再定義は出来ない
   // const sport = "baseball" => エラー
 
+// 配列と繰り返し処理
 let fruits = ["apple", "banana", "orange"];
 const fruit_name = ([...arr]) => {
   for(let i = 0; i < arr.length; ++i) {
