@@ -16,6 +16,16 @@ console.log(sport);
   // 定数は再代入・再定義は出来ない
   // const sport = "baseball" => エラー
 
+// 文字列・数値・変数の結合
+const num = 19
+const greet = "初めまして"
+const introduction = greet + "田中と言います。" + num + 91 + "年生まれです。"
+console.log(introduction);
+  
+// テンプレートリテラル
+const introduction2 = `${greet}田中と言います。${num}91年生まれです。`
+console.log(introduction2);
+  
 // 配列と繰り返し処理
 let fruits = ["apple", "banana", "orange"];
 const fruit_name = (arr) => {
