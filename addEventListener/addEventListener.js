@@ -1,0 +1,22 @@
+// addEventListener
+window.addEventListener('load', function(){
+  const getH1 = document.getElementById("test")
+  getH1.innerHTML = "ページ読み込みでh1要素に対してイベント発火"
+})
+
+const getButton1 = document.getElementById("button1")
+getButton1.addEventListener('click', function(){
+  console.log("ボタン1をクリックしました");
+})
+
+const getButton2 = document.getElementById("button2")
+const changeColor = () => {
+  getButton2.setAttribute("style", "color: red;")
+  console.log("カーソルを載せたらボタン2の文字色が赤くなる")
+}
+getButton2.addEventListener('mouseover', changeColor)
+
+getButton2.addEventListener('mouseout', function() {
+  getButton2.removeAttribute("style", "color: red;")
+  console.log("カーソルを外すとボタン2の文字色が元に戻る");
+})
