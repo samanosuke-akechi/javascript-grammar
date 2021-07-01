@@ -19,3 +19,21 @@ console.log(getClass[1]);  // 出力結果：<h1 class="hoge">h1要素</h1>
 const getQuery = document.querySelectorAll(".hoge");
 console.log(getQuery);  // 出力結果：NodeList(2) [div.hoge, h1.hoge]
 console.log(getQuery[1]);  // 出力結果：<h1 class="hoge">h1要素</h1>
+
+// HTMLCollectionとNodeListの違い
+  // 使えるメソッドが違う。例えばforEachはNodeListで使える。
+
+// 以下はエラーになる
+// let num1 = 1
+// getClass.forEach(function(item) {
+//   console.log(`${num1}回目：`);
+//   console.log(item);
+//   num1++;
+// })
+
+let num2 = 1
+getQuery.forEach(function(item) {
+  console.log(`${num2}回目：`);
+  console.log(item);
+  num2++;
+})
