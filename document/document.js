@@ -13,3 +13,9 @@ const getClass = document.getElementsByClassName("hoge");  // hogeというク�
 console.log(getClass);  // 出力結果：HTMLCollection(2) [div.hoge, h1.hoge]
 getClass[1].innerHTML = "h1要素"
 console.log(getClass[1]);  // 出力結果：<h1 class="hoge">h1要素</h1>
+
+// document.querySelectorAll("セレクタ名")
+  // 引数にセレクタ名を指定して、合致するHTML要素を全て取得する
+const getQuery = document.querySelectorAll(".hoge");
+console.log(getQuery);  // 出力結果：NodeList(2) [div.hoge, h1.hoge]
+console.log(getQuery[1]);  // 出力結果：<h1 class="hoge">h1要素</h1>
