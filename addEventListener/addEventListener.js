@@ -32,9 +32,20 @@ getInput.addEventListener("keypress", function(e) {
 // keyupイベント
   // キーが押された状態から離された時に発火する
   // escキーやenterキー、矢印キーでも発火する
+let right = 0
+let left = 0
 const getInput2 = document.getElementById("form2");
 getInput2.addEventListener("keyup", function(e) {
   console.log(e.key);
+  if (e.key == "ArrowRight") {
+    console.log("矢印キーの右が押されました");
+    right++;
+    console.log(right);
+  } else if (e.key == "ArrowLeft") {
+    console.log("矢印キーの左が押されました");
+    left++;
+    console.log(left);
+  }
 })
 
 // keydownイベント
