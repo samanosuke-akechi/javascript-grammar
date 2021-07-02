@@ -20,3 +20,28 @@ getButton2.addEventListener('mouseout', function() {
   getButton2.removeAttribute("style", "color: red;")
   console.log("カーソルを外すとボタン2の文字色が元に戻る");
 })
+
+// keypressイベント
+  // キーが押された時に発火する
+  // 文字が入力された時に発火する（escキーやenterキーなどでは発火しない）
+const getInput = document.getElementById("form");
+getInput.addEventListener("keypress", function(e) {
+  console.log(e.key);
+})
+
+// keyupイベント
+  // キーが押された状態から離された時に発火する
+  // escキーやenterキー、矢印キーでも発火する
+const getInput2 = document.getElementById("form2");
+getInput2.addEventListener("keyup", function(e) {
+  console.log(e.key);
+})
+
+// keydownイベント
+  // キーが押された時に発火する
+  // キーを押しっぱなしにすると連続的にイベント発火する
+  // escキーやenterキー、矢印キーでも発火する
+const getInput3 = document.getElementById("form3");
+getInput3.addEventListener("keydown", function(e) {
+  console.log(e.key);
+})
